@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5E8E30ED-C4C5-44A6-8674-A750549C8617}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../common;src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Client.cc" />
+    <ClCompile Include="src\Game.cc" />
+    <ClCompile Include="src\Lobby.cc" />
+    <ClCompile Include="src\Server.cc" />
+    <ClCompile Include="src\main.cc" />
+    <ClCompile Include="src\net\IpAddress.cc" />
+    <ClCompile Include="src\net\SocketException.cc" />
+    <ClCompile Include="src\net\win32\WinSocket.cc" />
+    <ClCompile Include="src\net\win32\WinTcpListener.cc" />
+    <ClCompile Include="src\net\win32\WinTcpSocket.cc" />
+    <ClCompile Include="src\net\win32\WinUdpSocket.cc" />
+    <ClCompile Include="src\threads\threadException.cc" />
+    <ClCompile Include="src\threads\wThread.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\packets\ClientDisconSig.h" />
+    <ClInclude Include="..\common\packets\ClientJoinedLobbySig.h" />
+    <ClInclude Include="..\common\packets\ClientLeftLobbySig.h" />
+    <ClInclude Include="..\common\packets\ClientPack.h" />
+    <ClInclude Include="..\common\packets\ConnectCmd.h" />
+    <ClInclude Include="..\common\packets\CreateLobbyCmd.h" />
+    <ClInclude Include="..\common\packets\GameStartedSig.h" />
+    <ClInclude Include="..\common\packets\JoinLobbyCmd.h" />
+    <ClInclude Include="..\common\packets\JoinLobbyResp.h" />
+    <ClInclude Include="..\common\packets\LeaveLobbyCmd.h" />
+    <ClInclude Include="..\common\packets\ListLobbiesCmd.h" />
+    <ClInclude Include="..\common\packets\ListLobbiesResp.h" />
+    <ClInclude Include="..\common\packets\Packet.h" />
+    <ClInclude Include="..\common\packets\Packets.h" />
+    <ClInclude Include="..\common\packets\ReadyUpdateSig.h" />
+    <ClInclude Include="..\common\packets\ServerPack.h" />
+    <ClInclude Include="..\common\packets\SetReadyCmd.h" />
+    <ClInclude Include="..\common\packets\StatusResp.h" />
+    <ClInclude Include="src\Client.h" />
+    <ClInclude Include="src\Entity.h" />
+    <ClInclude Include="src\Game.h" />
+    <ClInclude Include="src\Lobby.h" />
+    <ClInclude Include="src\Server.h" />
+    <ClInclude Include="src\net\IpAddress.h" />
+    <ClInclude Include="src\net\ISocket.h" />
+    <ClInclude Include="src\net\ITcpListener.h" />
+    <ClInclude Include="src\net\ITcpSocket.h" />
+    <ClInclude Include="src\net\IUdpSocket.h" />
+    <ClInclude Include="src\net\SocketException.h" />
+    <ClInclude Include="src\net\TcpListener.h" />
+    <ClInclude Include="src\net\TcpSocket.h" />
+    <ClInclude Include="src\net\UdpSocket.h" />
+    <ClInclude Include="src\net\win32\WinSocket.h" />
+    <ClInclude Include="src\net\win32\WinTcpListener.h" />
+    <ClInclude Include="src\net\win32\WinTcpSocket.h" />
+    <ClInclude Include="src\net\win32\WinUdpSocket.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

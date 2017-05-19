@@ -1,2 +1,1 @@
-# Rtype
-Rtype 2017
+R-Type (アール・タイプ Āru Taipu?) is a side scrolling shoot-em-up arcade game produced by Irem in 1987. The player controls a space fighter named the R-9 to defend humanity against a mysterious powerful alien life-form known as the "Bydo".
